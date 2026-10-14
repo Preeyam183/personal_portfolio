@@ -5,7 +5,7 @@ export function WaterLayers() {
 }
 export function HeroName() {
  const row=(word:string,offset:number)=><span className="name-row" aria-hidden="true">{[...word].map((letter,i)=><span className={`name-letter ${letter==='.'?'name-dot':''}`} key={i} style={{'--letter-index':i+offset,'--tilt':`${[ -5,3,-2,4,-3,2, -2][i%7]}deg`} as CSSProperties}>{letter}</span>)}</span>;
- return <h1 id="hero-title" aria-label="Preeyam Shah">{row('Preeyam',0)}{row('Shah.',7)}</h1>;
+ return <h1 id="hero-title" aria-label="Preeyam Shah">{row('Preeyam',0)}{row('Shah',7)}</h1>;
 }
 export function Seafloor() {
  return <div className="bikini-bottom" aria-label="Animated original underwater village on a sandy seabed">
