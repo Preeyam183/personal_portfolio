@@ -31,3 +31,13 @@ When hosting later, set `NEXT_PUBLIC_SITE_URL` to the final origin before buildi
 ## Visual assets
 
 The painted underwater setting is in `public/scenery/underwater-village.webp`; its generation prompt is documented alongside it. Actual project images and their source references are in `public/projects/`. The Premier League preview is illustrative because its public repository has no image assets.
+
+The continuous water environment and dated experience timeline are styled in `app/immersive.css`. Experience dates and optional project GitHub links live in `lib/content.ts`. Ambient motion can be paused and respects system reduced motion.
+
+The hero surface uses a lightweight canvas to refract the painted water texture at approximately 30 fps. It freezes for paused/reduced motion and stops drawing after the surface scrolls offscreen. The headshot remains the original JPEG with a separate transparent frame overlay. Official company/certification assets are documented in `public/logos/SOURCES.md`.
+
+Navigation appears as a fixed bar after scrolling through the hero. The experience timeline uses a small scroll-following anchor, hidden when motion is paused or reduced. The RAISE-26 card now displays the complete original winner poster.
+
+The timeline's weathered anchor sways from its eye while a dark linked chain tracks scroll progress. Nearby experience cards dip slightly as it passes; paused/reduced motion disables the sway and card tug. Legacy hero fish, extra flower overlays, faint bubble trio, and the old light overlay have been removed.
+
+The contact section and footer use normal flow to avoid a blank final scroll area. The email composer opens a prefilled draft in the visitor’s own email app; it does not send messages or require a backend.
