@@ -496,3 +496,8 @@ footer { z-index: 4; }
   .section-nav::after { width: 10px; height: 10px; top: -5px; right: 9%; }
 }
 @media(prefers-reduced-motion:reduce) { .section-nav>div a { transition: none; } }
+
+/* Simulated inertia replaces the repeating sway and CSS interpolation. */
+.timeline-wrap::after { height: var(--chain-end, 32px); }
+.anchor-swing { animation: none; transform: rotate(var(--anchor-angle, 0deg)); transform-origin: 50% 11.607%; }
+.timeline-card { transition: none; }
