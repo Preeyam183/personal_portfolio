@@ -41,3 +41,5 @@ Navigation appears as a fixed bar after scrolling through the hero. The experien
 The timeline's weathered anchor sways from its eye while a dark linked chain tracks scroll progress. Nearby experience cards dip slightly as it passes; paused/reduced motion disables the sway and card tug. Legacy hero fish, extra flower overlays, faint bubble trio, and the old light overlay have been removed.
 
 The contact section and footer use normal flow to avoid a blank final scroll area. The email composer opens a prefilled draft in the visitor’s own email app; it does not send messages or require a backend.
+
+Timeline connections use dark metal links and a bolted mounting ring. Navigation displays the full name. CVM4X and RAISE-26 share a corner trophy badge. The contact headline uses outlined yellow lettering for contrast over the water artwork.

@@ -23,6 +23,11 @@ export function createTimelineMotion(media: MediaQueryList) {
    card.element.style.setProperty('--card-tug', `${tug.toFixed(2)}px`);
    card.element.style.setProperty('--card-slide', `${(tug * (card.index % 2 ? -.17 : .17)).toFixed(2)}px`);
    card.element.style.setProperty('--card-tilt', `${(tug * (card.index % 2 ? -.055 : .055)).toFixed(2)}deg`);
+   const jointX = chainPoint(card.y + tug).x;
+   const baseReach = mobile ? 38 : window.innerWidth <= 900 ? 35 : 45;
+   const slide = tug * (card.index % 2 ? -.17 : .17);
+   const reach = mobile ? baseReach - jointX + slide : baseReach + (card.index % 2 ? -jointX : jointX) - Math.abs(slide);
+   card.element.style.setProperty('--connector-length', `${Math.max(12, reach).toFixed(2)}px`);
   }
  };
  const tick = (time: number) => {
@@ -62,7 +67,7 @@ export function createTimelineMotion(media: MediaQueryList) {
   travel = Math.max(0, bounds.height - 105);
   target = Math.max(0, Math.min(travel, window.innerHeight * .48 - bounds.top - 30));
   visible = bounds.bottom > -100 && bounds.top < window.innerHeight + 100;
-  cards.forEach(card => { card.y = card.element.offsetTop + 53; });
+  cards.forEach(card => { card.y = card.element.offsetTop + (mobile ? 42 : 53); });
   if (!initialized) { anchor.position = target; swing.position = chainPoint(eye + target).angle * .65; initialized = true; }
   if (!frame) frame = requestAnimationFrame(tick);
  };
