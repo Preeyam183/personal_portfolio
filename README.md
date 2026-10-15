@@ -61,3 +61,11 @@ The base path is compiled into scripts, images, social previews, and exported CS
 ## Skills and milestones
 
 Edit the `skills` and `metrics` arrays in `lib/content.ts`. The compact skill grid wraps as entries are added; its twelve entries are core software engineering skills selected from the provided résumé. Technology logos and attribution are in `public/skills/`. Metrics show competition wins, projects built, SpongeBob episodes watched, and internships; plus suffixes are preserved during the count-up. The metrics sit immediately below About and count up once when visible. The floating skills section sits between Projects and Experience. Both respect the motion control and reduced-motion preferences.
+
+## Experience details
+
+Algoverse and NeuralSeek display brief topic buttons that open native dialogs with résumé-based bullet points and technologies. AWS and Rutgers AI Club remain simple entries. Edit `experience` in `lib/content.ts`; add `{ label, href }` objects to an entry’s `details.links` for verified public resources. Algoverse includes the user-provided NeurIPS 2026 workshop venue; its paper link is pending. Dialogs support Escape, backdrop dismissal, focus restoration, and reduced motion.
+
+## Project dialogs
+
+Click any project picture (including the Premier League illustration) to open its details. Edit descriptions, highlights, technology lists, and local galleries in `lib/project-details.ts`; project titles and external links stay in `lib/content.ts`. The shared dialog shell in `components/detail-dialog.tsx` handles focus, Escape, backdrop dismissal, and background scroll locking for both projects and experience. Its close control stays visible during long galleries. The Premier League visual is explicitly labeled as an illustration because no actual screenshot was available.

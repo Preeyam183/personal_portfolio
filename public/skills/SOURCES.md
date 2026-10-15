@@ -17,3 +17,5 @@ Technology icons from [Devicon](https://github.com/devicons/devicon), under the 
 SQL uses an original database symbol because SQL is a language, not a vendor.
 - supabase.svg: https://raw.githubusercontent.com/devicons/devicon/master/icons/supabase/supabase-original.svg
 - github.svg: https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg
+
+- docker-mark.svg: https://raw.githubusercontent.com/devicons/devicon/master/icons/docker/docker-plain.svg (simplified blue whale mark)

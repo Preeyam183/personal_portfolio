@@ -10,11 +10,38 @@ export const projects = [
   { id: 'camera', github: 'https://github.com/Anethula/IEEExRUHART26', image: '/projects/cvm4x.webp', imageAlt: 'Actual CVM4X home surveillance interface', number: '03', name: 'CVM4X', category: 'COMPUTER VISION × SECURITY', description: 'Making security footage easier to understand with object detection, activity timelines, AI summaries, and priority-based alerts.', note: 'Best use of AI/ML', href: 'https://devpost.com/software/cvm4x', link: 'Explore on Devpost', color: 'pink' },
   { id: 'raise', github: null, image: '/projects/raise-winner.jpeg', imageAlt: 'The five-member Scarlet API team holding their first-place RAISE-26 awards', number: '04', name: 'RAISE-26\nData Science Competition', category: 'DATA SCIENCE × COMPETITION', description: 'Our team, Scarlet API, won 1st place in the undergraduate track at RAISE-26. We explored AI’s impact through data science and analysis of news coverage.', note: '1st Place · Undergraduate Track', href: 'https://github.com/Preeyam183/RAISE-26_Hackathon', link: 'View on GitHub', color: 'blue' },
 ] as const;
+export type ExperienceDetailsContent = {
+ topic: string;
+ publication?: string;
+ bullets: readonly string[];
+ technologies: readonly string[];
+ links: readonly { label: string; href: string }[];
+};
 export const experience = [
- { id: 'rutgers', logo: '/logos/rutgers-ai.png', logoAlt: 'Rutgers AI Club logo', name: 'Rutgers AI Club', role: 'Peer Mentor', type: 'COMMUNITY', date: 'September 2026', dateTime: '2026-09' },
- { id: 'algoverse', logo: '/logos/algoverse.png', logoAlt: 'Algoverse AI Research logo', name: 'Algoverse', role: 'AI/ML Researcher', type: 'RESEARCH', date: 'May – August 2026', dateTime: '2026-05' },
- { id: 'aws', logo: '/logos/aws-cloud-practitioner.png', logoAlt: 'AWS Certified Cloud Practitioner badge', name: 'AWS', role: 'Certified Cloud Practitioner', type: 'CERTIFICATION', date: 'May 2026', dateTime: '2026-05' },
- { id: 'neuralseek', logo: '/logos/neuralseek.svg', logoAlt: 'NeuralSeek logo', name: 'NeuralSeek', role: 'AI/ML Intern', type: 'INDUSTRY', date: 'April – May 2026', dateTime: '2026-04' },
+ { id: 'rutgers', logo: '/logos/rutgers-ai.png', logoAlt: 'Rutgers AI Club logo', name: 'Rutgers AI Club', role: 'Peer Mentor', details: null, type: 'COMMUNITY', date: 'September 2026', dateTime: '2026-09' },
+ { id: 'algoverse', logo: '/logos/algoverse.png', logoAlt: 'Algoverse AI Research logo', name: 'Algoverse', role: 'AI/ML Researcher', type: 'RESEARCH', date: 'May – August 2026', dateTime: '2026-05', details: {
+  topic: 'VLM Interpretability',
+  publication: 'NeurIPS 2026 · Interpretability as a Science workshop',
+  bullets: [
+   'Designed an evaluation pipeline to study vision-language model interpretability across 2 model architectures and 6 experiments.',
+   'Built reusable experiments on AWS SageMaker with S3-backed caching, saving 10+ hours of compute.',
+   'Processed 13M+ model activations and analyzed 5,400+ experimental results to compare model interventions.',
+  ],
+  technologies: ['Python', 'PyTorch', 'pytest', 'AWS SageMaker', 'Amazon S3', 'Pandas', 'NumPy', 'scikit-learn'],
+  // Add a verified public paper URL here when available.
+  links: [],
+ } satisfies ExperienceDetailsContent },
+ { id: 'aws', logo: '/logos/aws-cloud-practitioner.png', logoAlt: 'AWS Certified Cloud Practitioner badge', name: 'AWS', role: 'Certified Cloud Practitioner', details: null, type: 'CERTIFICATION', date: 'May 2026', dateTime: '2026-05' },
+ { id: 'neuralseek', logo: '/logos/neuralseek.svg', logoAlt: 'NeuralSeek logo', name: 'NeuralSeek', role: 'AI/ML Intern', type: 'INDUSTRY', date: 'April – May 2026', dateTime: '2026-04', details: {
+  topic: 'AI Agents & Recommendations',
+  bullets: [
+   'Developed 3 AI agents and NLP pipelines, deploying workflows with 15+ AWS Lambda functions.',
+   'Built a recommendation agent with retrieval-augmented generation, reaching 90% accuracy and improving performance by 50% over baseline models.',
+   'Integrated REST APIs to retrieve and structure metadata from a catalog of 1.3M+ media assets.',
+  ],
+  technologies: ['NeuralSeek', 'AWS Lambda', 'Pinecone', 'REST APIs', 'RAG'],
+  links: [],
+ } satisfies ExperienceDetailsContent },
 ];
 
 // Keep only confirmed milestones; add more when they tell a useful story.
@@ -35,7 +62,7 @@ export const skills = [
  { id: 'flask', label: 'Flask', icon: '/skills/flask.svg' },
  { id: 'postgresql', label: 'PostgreSQL', icon: '/skills/postgresql.svg' },
  { id: 'supabase', label: 'Supabase', icon: '/skills/supabase.svg' },
- { id: 'docker', label: 'Docker', icon: '/skills/docker.svg' },
+ { id: 'docker', label: 'Docker', icon: '/skills/docker-mark.svg' },
  { id: 'aws', label: 'AWS', icon: '/skills/aws.svg' },
  { id: 'git', label: 'Git', icon: '/skills/git.svg' },
  { id: 'github', label: 'GitHub', icon: '/skills/github.svg' },
