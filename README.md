@@ -40,7 +40,7 @@ Navigation appears as a fixed bar after scrolling through the hero. The experien
 
 The timeline's weathered anchor sways from its eye while a dark linked chain tracks scroll progress. Nearby experience cards dip slightly as it passes; paused/reduced motion disables the sway and card tug. Legacy hero fish, extra flower overlays, faint bubble trio, and the old light overlay have been removed.
 
-The contact section and footer use normal flow to avoid a blank final scroll area. The email composer opens a prefilled draft in the visitor’s own email app; it does not send messages or require a backend.
+The contact section and footer use normal flow to avoid a blank final scroll area. The centered contact invitation includes a direct email link that opens the visitor’s email app.
 
 Timeline connections use dark metal links and a bolted mounting ring. Navigation displays the full name. CVM4X and RAISE-26 share a corner trophy badge. The contact headline uses outlined yellow lettering for contrast over the water artwork.
 
@@ -57,3 +57,7 @@ NEXT_PUBLIC_BASE_PATH=/personal_portfolio NEXT_PUBLIC_SITE_URL=https://preeyam18
 ```
 
 The base path is compiled into scripts, images, social previews, and exported CSS. Normal `npm run dev` continues to serve at `/`.
+
+## Skills and milestones
+
+Edit the `skills` and `metrics` arrays in `lib/content.ts`. The compact skill grid wraps as entries are added; its twelve entries are core software engineering skills selected from the provided résumé. Technology logos and attribution are in `public/skills/`. Metrics show competition wins, projects built, SpongeBob episodes watched, and internships; plus suffixes are preserved during the count-up. The metrics sit immediately below About and count up once when visible. The floating skills section sits between Projects and Experience. Both respect the motion control and reduced-motion preferences.

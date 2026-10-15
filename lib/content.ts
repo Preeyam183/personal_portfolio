@@ -16,3 +16,27 @@ export const experience = [
  { id: 'aws', logo: '/logos/aws-cloud-practitioner.png', logoAlt: 'AWS Certified Cloud Practitioner badge', name: 'AWS', role: 'Certified Cloud Practitioner', type: 'CERTIFICATION', date: 'May 2026', dateTime: '2026-05' },
  { id: 'neuralseek', logo: '/logos/neuralseek.svg', logoAlt: 'NeuralSeek logo', name: 'NeuralSeek', role: 'AI/ML Intern', type: 'INDUSTRY', date: 'April – May 2026', dateTime: '2026-04' },
 ];
+
+// Keep only confirmed milestones; add more when they tell a useful story.
+export const metrics = [
+ { id: 'wins', label: 'Competition wins', value: 2, suffix: '', note: 'IDEAS INTO IMPACT' },
+ { id: 'built', label: 'Projects built', value: 6, suffix: '+', note: 'ALWAYS BUILDING' },
+ { id: 'episodes', label: 'SpongeBob episodes watched', value: 200, suffix: '+', note: 'BIKINI BOTTOM REGULAR' },
+ { id: 'internships', label: 'Internships completed', value: 2, suffix: '', note: 'LEARNING BY DOING' },
+] as const;
+
+// Core software engineering skills from the résumé and explicit user updates.
+export const skills = [
+ { id: 'python', label: 'Python', icon: '/skills/python.svg' },
+ { id: 'java', label: 'Java', icon: '/skills/java.svg' },
+ { id: 'c', label: 'C', icon: '/skills/c.svg' },
+ { id: 'sql', label: 'SQL', icon: '/skills/sql.svg' },
+ { id: 'fastapi', label: 'FastAPI', icon: '/skills/fastapi.svg' },
+ { id: 'flask', label: 'Flask', icon: '/skills/flask.svg' },
+ { id: 'postgresql', label: 'PostgreSQL', icon: '/skills/postgresql.svg' },
+ { id: 'supabase', label: 'Supabase', icon: '/skills/supabase.svg' },
+ { id: 'docker', label: 'Docker', icon: '/skills/docker.svg' },
+ { id: 'aws', label: 'AWS', icon: '/skills/aws.svg' },
+ { id: 'git', label: 'Git', icon: '/skills/git.svg' },
+ { id: 'github', label: 'GitHub', icon: '/skills/github.svg' },
+] as const;
