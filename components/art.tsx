@@ -1,5 +1,6 @@
+import { assetPath } from '@/lib/assets';
 export function Jellyfish({ className = '' }: { className?: string }) {
- return <span className={`${className} painted-jelly`} aria-hidden="true"><img className="jelly-body" src="/scenery/painted-jellyfish.webp" alt="" width="1024" height="1536"/></span>;
+ return <span className={`${className} painted-jelly`} aria-hidden="true"><img className="jelly-body" src={assetPath('/scenery/painted-jellyfish.webp')} alt="" width="1024" height="1536"/></span>;
 }
 export function ProjectArt({ kind }: { kind: string }) {
  if (kind === 'trees') return <svg viewBox="0 0 540 360" aria-hidden="true"><circle cx="422" cy="68" r="38" fill="#F9E898"/><path d="M0 310Q100 240 240 300T540 275V360H0Z" fill="#B5D6A2"/><path d="M235 310V162M235 227L193 192M237 202L280 166" stroke="#877044" strokeWidth="18" strokeLinecap="round"/><path d="M170 186C80 159 140 67 188 87C182 12 289 11 299 88C374 42 401 158 326 175C310 240 243 213 235 191C205 218 172 217 170 186Z" fill="#518F62"/><path d="M188 110C203 79 241 71 268 92" stroke="#87B98C" strokeWidth="8" strokeLinecap="round"/><rect x="315" y="192" width="155" height="75" rx="20" fill="#FFFDF0"/><path d="M330 260L307 285L311 247" fill="#FFFDF0"/><circle cx="351" cy="228" r="6" fill="#578A69"/><circle cx="382" cy="228" r="6" fill="#578A69"/><circle cx="413" cy="228" r="6" fill="#578A69"/><path d="M79 280Q60 239 83 226Q105 252 79 280M79 280Q103 249 119 263Q108 285 79 280" fill="#6FA174"/></svg>;

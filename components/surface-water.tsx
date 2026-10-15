@@ -1,5 +1,6 @@
 'use client';
 
+import { assetPath } from '@/lib/assets';
 import { useEffect, useRef } from 'react';
 
 /** Refracts the painted surface through travelling waves without moving page text. */
@@ -57,7 +58,7 @@ export function SurfaceWater() {
    frame = requestAnimationFrame(draw);
   };
   image.onload = () => { ready = true; };
-  image.src = '/scenery/open-water.webp';
+  image.src = assetPath('/scenery/open-water.webp');
   resize(); frame = requestAnimationFrame(draw);
   window.addEventListener('resize', resize);
   return () => { cancelAnimationFrame(frame); window.removeEventListener('resize', resize); image.onload = null; };

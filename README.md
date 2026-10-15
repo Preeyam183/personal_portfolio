@@ -18,7 +18,7 @@ npm run typecheck
 npm run build
 ```
 
-The production static site is generated in `out/`. It can be hosted by any static file server. Deployment is intentionally deferred.
+The production static site is generated in `out/`. It can be hosted by any static file server. GitHub Pages deploys this export automatically when changes are pushed to `main`.
 
 ## Editing
 
@@ -43,3 +43,17 @@ The timeline's weathered anchor sways from its eye while a dark linked chain tra
 The contact section and footer use normal flow to avoid a blank final scroll area. The email composer opens a prefilled draft in the visitor’s own email app; it does not send messages or require a backend.
 
 Timeline connections use dark metal links and a bolted mounting ring. Navigation displays the full name. CVM4X and RAISE-26 share a corner trophy badge. The contact headline uses outlined yellow lettering for contrast over the water artwork.
+
+## GitHub Pages
+
+Live site: https://preeyam183.github.io/personal_portfolio/
+
+The workflow in `.github/workflows/pages.yml` builds and deploys `main` using GitHub Actions. In repository Settings → Pages, the source is GitHub Actions.
+
+To reproduce the hosted build locally:
+
+```sh
+NEXT_PUBLIC_BASE_PATH=/personal_portfolio NEXT_PUBLIC_SITE_URL=https://preeyam183.github.io npm run build
+```
+
+The base path is compiled into scripts, images, social previews, and exported CSS. Normal `npm run dev` continues to serve at `/`.
