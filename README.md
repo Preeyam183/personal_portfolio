@@ -26,7 +26,7 @@ Update profile links, project descriptions, and experience entries in `lib/conte
 
 All links and main content work without JavaScript. Motion honors the system reduced-motion setting and can be paused using the navigation control. Offscreen ambient animations pause. No analytics, contact backend, or external runtime data requests are included.
 
-When hosting later, set `NEXT_PUBLIC_SITE_URL` to the final origin before building so social-preview URLs resolve correctly. It defaults to localhost during development.
+Sharing metadata defaults to the public GitHub Pages URL. For another host, set `NEXT_PUBLIC_SITE_URL` and `NEXT_PUBLIC_BASE_PATH` before building. The Open Graph and Twitter image is `public/hero-social-v2.png`, a 1200×630 still of the actual hero section. Use a new image filename when updating it to help sharing services refresh cached previews.
 
 ## Visual assets
 
